@@ -1,0 +1,99 @@
+Ability Attack
+Ability Enhancement
+Ability Heal
+Ability Screen
+Alter Ego
+Alteration
+Alternate Persona
+Animate Image
+Astral Awareness
+Astral Projection
+Body Armour
+Carrier Wave
+Combat Awareness
+Computer Links
+Corrosive Attack
+Cosmic Vision
+Creation
+Damage Absorption
+Death Power
+Defense Piercing
+Density Control
+Dimensional Travel
+Emotion Control
+Empathy
+Energy Blast
+Energy Defense
+Energy Detection
+Energy Flight
+Energy Generation
+Energy Missile
+Energy Sheath
+Energy Touch
+Enhanced Senses
+Entrapment
+Environmental Control
+Environmental Flight
+Extra Body Parts
+Force Field Generation
+Gadgetry
+Growth
+Health Drain
+Health Heal
+Hyper Climbing
+Hyper Digging
+Hyper Leaping
+Hyper Running
+Hyper Speed
+Image Generation
+Independence
+Invisibility
+Levitation
+Life Detection
+Life Power
+Malleability
+Matter Absorption
+Memory Manipulation
+Mental Domination
+Mental Probe
+Missile Attack
+Natural Weaponry
+Non-Human Communication
+Omni Vision
+Personal Force Field
+Phasing
+Possession
+Power Boost
+Power Cloak
+Power Detection
+Power Extension
+Power Mimicry
+Power Node
+Power Nullification
+Probability Control
+Radar Sense
+Reflection
+Regeneration
+Remote Sensing
+Resistance
+Revival
+Rotting Attack
+Self-Duplication
+Separation
+Shapeshift
+Shrinking
+Size Manipulation
+Suspended Animation
+Talent Mimicry
+Telekinesis
+Telepathy
+Teleportation
+Time Cognition
+Time Control
+Time Travel
+Time Warp
+Transformation
+True Flight
+Unique Item
+Water Freedom
+Weakness Detection

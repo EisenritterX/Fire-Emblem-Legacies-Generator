@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Fire Emblem Legacies Generator")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Fire Emblem Legacies Generator Tool")]
+[assembly: AssemblyDescription("This programe generates various datas for Fire Emblem Legacies Game")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Fire Emblem Legacies Generator")]
+[assembly: AssemblyCompany("Eisenritter")]
+[assembly: AssemblyProduct("FELegaciesGeneratorTool")]
 [assembly: AssemblyCopyright("Copyright ©  2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("5524d169-bb43-46f9-9c36-79e8ba00422e")]
+[assembly: Guid("c241031a-b94d-4c04-aa0a-74af266c72c9")]
 
 // Version information for an assembly consists of the following four values:
 //
