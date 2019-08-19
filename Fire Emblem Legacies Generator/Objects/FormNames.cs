@@ -17,6 +17,7 @@ namespace FELegaciesGeneratorTool.Objects
     public enum FormNames
     {
         SPLASH_SCREEN,
+        START_FORM,
         HEROGEN_FORM,
         CLASSGEN_FORM,
         ITEMGEN_FORM,

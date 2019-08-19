@@ -143,6 +143,7 @@
     <Content Include="Data\firstNames.txt" />
     <Content Include="Data\lastNames.txt" />
     <Content Include="Data\powers.txt" />
+    <None Include="Resources\Red Button.png" />
     <None Include="Resources\Button Blue.png" />
     <None Include="Resources\Shield of Seals.png" />
   </ItemGroup>

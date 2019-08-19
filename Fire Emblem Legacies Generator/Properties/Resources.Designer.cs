@@ -60,12 +60,13 @@ namespace FELegaciesGeneratorTool.Properties {
             }
         }
         
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap Button_Blue {
             get {
-                object obj = ResourceManager.GetObject("Button Blue", resourceCulture);
+                object obj = ResourceManager.GetObject("Button Blue1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +74,9 @@ namespace FELegaciesGeneratorTool.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Button_Blue1 {
+        internal static System.Drawing.Bitmap Red_Button {
             get {
-                object obj = ResourceManager.GetObject("Button Blue1", resourceCulture);
+                object obj = ResourceManager.GetObject("Red Button", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

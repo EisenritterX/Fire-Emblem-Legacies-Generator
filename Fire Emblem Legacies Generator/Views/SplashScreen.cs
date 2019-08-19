@@ -37,7 +37,7 @@ namespace FELegaciesGeneratorTool.Views
             SplashTimer.Enabled = false;
             ProgressTimer.Enabled = false;
             this.Hide();
-            Program.Forms[FormNames.HEROGEN_FORM].Show();
+            Program.Forms[FormNames.START_FORM].Show();
         }
     }
 }

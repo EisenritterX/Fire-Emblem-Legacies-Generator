@@ -263,5 +263,10 @@ namespace FELegaciesGeneratorTool.Views
         {
             Application.Exit();
         }
+
+        private void HeroGenerator_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FELegaciesGeneratorTool.Objects;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,6 +14,17 @@ namespace FELegaciesGeneratorTool.Views
         public StartForm()
         {
             InitializeComponent();
+        }
+
+        private void QuitButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void CreateUnitButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Program.Forms[FormNames.HEROGEN_FORM].Show();
         }
     }
 }

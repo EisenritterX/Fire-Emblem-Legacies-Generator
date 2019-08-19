@@ -121,10 +121,13 @@
   <data name="Button Blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Button Blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Button Blue1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Button Blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Shield of Seals" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Shield of Seals.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Button Blue1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Button Blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Red Button" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Red Button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

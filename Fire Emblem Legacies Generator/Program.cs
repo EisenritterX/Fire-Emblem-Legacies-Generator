@@ -27,8 +27,10 @@ namespace FELegaciesGeneratorTool
             Forms = new Dictionary<FormNames, Form>();
 
             //Add form used to the dictionary
-            Forms.Add(FormNames.HEROGEN_FORM, new HeroGenerator());
             Forms.Add(FormNames.SPLASH_SCREEN, new SplashScreen());
+            Forms.Add(FormNames.START_FORM, new StartForm());
+            Forms.Add(FormNames.HEROGEN_FORM, new HeroGenerator());
+            
 
             //Creates a new Hero
             hero = new Hero();
