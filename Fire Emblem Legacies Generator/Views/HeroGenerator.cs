@@ -107,6 +107,7 @@ namespace FELegaciesGeneratorTool.Views
             }
         }
 
+
         /// <summary>
         /// Saving Character Sheet
         /// </summary>
@@ -165,10 +166,10 @@ namespace FELegaciesGeneratorTool.Views
         private void GenerateRandomPowers()
         {
             Random powerIndex = new Random();
-            Power1DataLabel.Text =PowersList[powerIndex.Next(0, PowersList.Count - 1)];
-            Power2DataLabel.Text = PowersList[powerIndex.Next(0, PowersList.Count - 1)];
-            Power3DataLabel.Text = PowersList[powerIndex.Next(0, PowersList.Count - 1)];
-            Power4DataLabel.Text = PowersList[powerIndex.Next(0, PowersList.Count - 1)];
+            //Power1DataLabel.Text =PowersList[powerIndex.Next(0, PowersList.Count - 1)];
+            //Power2DataLabel.Text = PowersList[powerIndex.Next(0, PowersList.Count - 1)];
+            //Power3DataLabel.Text = PowersList[powerIndex.Next(0, PowersList.Count - 1)];
+            //Power4DataLabel.Text = PowersList[powerIndex.Next(0, PowersList.Count - 1)];
 
             //Program.hero.Powers.Add(Power1DataLabel.Text);
             //Program.hero.Powers.Add(Power2DataLabel.Text);
@@ -209,8 +210,8 @@ namespace FELegaciesGeneratorTool.Views
         private void GenerateNameButton_Click(object sender, EventArgs e)
         {
             GenerateNames();
-            Program.hero.FirstName = FirstNameDataLabel.Text;
-            Program.hero.LastName = LastNameDataLabel.Text;
+            Program.hero.FirstName = FirstNameTextBox.Text;
+            Program.hero.LastName = LastNameTextBox.Text;
         }
 
         private void LoadNames()
@@ -225,9 +226,9 @@ namespace FELegaciesGeneratorTool.Views
             Random lnameRandomIndex = new Random();
             string Fname = FirstNameList[fnameRandomIndex.Next(0, FirstNameList.Count - 1)];
             string Lname = LastNameList[lnameRandomIndex.Next(0, LastNameList.Count - 1)];
-            HeroNameTextBox.Text = Fname +" "+ Lname;
-            FirstNameDataLabel.Text = Fname;
-            LastNameDataLabel.Text = Lname;
+            //HeroNameTextBox.Text = Fname +" "+ Lname;
+            FirstNameTextBox.Text = Fname;
+            LastNameTextBox.Text = Lname;
         }
 
         private void MainTabControl_SelectedIndexChanged(object sender, EventArgs e)
@@ -240,8 +241,8 @@ namespace FELegaciesGeneratorTool.Views
 
         private void LoadHero()
         {
-            CSFname.Text = Program.hero.FirstName;
-            CSLName.Text = Program.hero.LastName;
+            //CSFname.Text = Program.hero.FirstName;
+            //CSLName.Text = Program.hero.LastName;
             ////Physical Ability
             //CSFighting.Text = Program.hero.Fighting;
             //CSStrength.Text = Program.hero.Agility;
@@ -267,6 +268,54 @@ namespace FELegaciesGeneratorTool.Views
         private void HeroGenerator_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void PortraitPictureBox_Click(object sender, EventArgs e)
+        {
+            //configure the file dialog
+            CharacterSheetOpenFileDialog.FileName = "";
+            CharacterSheetOpenFileDialog.InitialDirectory = Directory.GetCurrentDirectory();
+            CharacterSheetOpenFileDialog.Filter = "Picture Files (*.jpg)|*.jpg| PNG Files (*.png)|*.png| BMP Files (*.bmp)|*.bmp| All Files{*.*)|*.*";
+
+            //open the file dialog
+            var result = CharacterSheetOpenFileDialog.ShowDialog();
+            if (result != DialogResult.Cancel)
+            {
+                try
+                {
+                    PortraitPictureBox.Image = new Bitmap(CharacterSheetOpenFileDialog.FileName);
+                    //Open the stream for reading
+                    using (StreamReader inputStream = new StreamReader(File.Open(CharacterSheetOpenFileDialog.FileName, FileMode.Open)))
+                    {
+
+                        //Read from file
+                        ////Physical Ability
+                        //Program.hero.Fighting = inputStream.ReadLine();
+                        //Program.hero.Agility = inputStream.ReadLine();
+                        //Program.hero.Strength = inputStream.ReadLine();
+                        //Program.hero.Endurance = inputStream.ReadLine();
+                        ////Mental Abillity
+                        //Program.hero.Reason = inputStream.ReadLine();
+                        //Program.hero.Intuition = inputStream.ReadLine();
+                        //Program.hero.Psyche = inputStream.ReadLine();
+                        //Program.hero.Popularity = inputStream.ReadLine();
+
+                        //Program.hero.Powers.Clear();
+                        //Program.hero.Powers.Add(inputStream.ReadLine());
+                        //Program.hero.Powers.Add(inputStream.ReadLine());
+                        //Program.hero.Powers.Add(inputStream.ReadLine());
+                        //Program.hero.Powers.Add(inputStream.ReadLine());
+                        //Clean up
+                        inputStream.Close();
+                        inputStream.Dispose();
+                    }
+                }
+                catch (IOException exception)
+                {
+                    MessageBox.Show("ERROR" + exception.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                LoadHero();
+            }
         }
     }
 }
