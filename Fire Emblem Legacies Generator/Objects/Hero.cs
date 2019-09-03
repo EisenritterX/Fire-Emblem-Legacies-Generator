@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,6 +27,7 @@ namespace FELegaciesGeneratorTool.Objects
         public string Name { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
+        public Image Portrait { get; set; }
         
 
         //PRIMARY ABILITIES
@@ -127,9 +129,12 @@ namespace FELegaciesGeneratorTool.Objects
             }
         }
 
-        //Power List
+        //Unit Class
         public UnitClass Class { get; set; }
+        //Power List
         public Power Powers;
+        //Mastery
+        public Mastery mastery;
 
         //Constructor
         public Hero()

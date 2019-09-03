@@ -15,5 +15,6 @@ namespace FELegaciesGeneratorTool.Objects
         // Public Properties
         public string PowerName { get; set; }
         public int Number { get; set; }
+        public string PowerDescription { get; set; }
     }
 }

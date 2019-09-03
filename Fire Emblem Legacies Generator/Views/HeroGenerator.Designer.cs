@@ -49,21 +49,21 @@
             this.ClassLabel = new System.Windows.Forms.Label();
             this.NameDataLabel = new System.Windows.Forms.Label();
             this.NameLabel = new System.Windows.Forms.Label();
-            this.PopularityDataLabel = new System.Windows.Forms.Label();
-            this.PsycheDataLabel = new System.Windows.Forms.Label();
-            this.EnduranceDataLabel = new System.Windows.Forms.Label();
-            this.IntuitionDataLabel = new System.Windows.Forms.Label();
+            this.ResistanceDataLabel = new System.Windows.Forms.Label();
+            this.DefenseDataLabel = new System.Windows.Forms.Label();
+            this.SkillDataLabel = new System.Windows.Forms.Label();
+            this.LuckDataLabel = new System.Windows.Forms.Label();
             this.HealthLabel = new System.Windows.Forms.Label();
             this.StrengthLabel = new System.Windows.Forms.Label();
             this.ResistanceLabel = new System.Windows.Forms.Label();
-            this.StrengthDataLabel = new System.Windows.Forms.Label();
+            this.MagicDataLabel = new System.Windows.Forms.Label();
             this.DefenseLabel = new System.Windows.Forms.Label();
             this.SkillLabel = new System.Windows.Forms.Label();
             this.SpeedLabel = new System.Windows.Forms.Label();
-            this.AgilityDataLabel = new System.Windows.Forms.Label();
-            this.FightingDataLabel = new System.Windows.Forms.Label();
+            this.StrengthDataLabel = new System.Windows.Forms.Label();
+            this.HealthDataLabel = new System.Windows.Forms.Label();
             this.LuckLabel = new System.Windows.Forms.Label();
-            this.ReasonDataLabel = new System.Windows.Forms.Label();
+            this.SpeedDataLabel = new System.Windows.Forms.Label();
             this.GenerateAbilitiesButton = new System.Windows.Forms.Button();
             this.MagicLabel = new System.Windows.Forms.Label();
             this.GrowthLabel = new System.Windows.Forms.Label();
@@ -153,6 +153,8 @@
             this.BackButton = new System.Windows.Forms.Button();
             this.CharacterSheetOpenFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.CharacterSheetSaveFileDialog = new System.Windows.Forms.SaveFileDialog();
+            this.CharacterPortraitOFD = new System.Windows.Forms.OpenFileDialog();
+            this.SaveProcessButton = new System.Windows.Forms.Button();
             this.MainTabControl.SuspendLayout();
             this.IdentityPage.SuspendLayout();
             this.UnitTableLayoutPanel.SuspendLayout();
@@ -326,7 +328,7 @@
             this.GenderComboBox.Items.AddRange(new object[] {
             "MALE",
             "FEMALE"});
-            this.GenderComboBox.Location = new System.Drawing.Point(191, 85);
+            this.GenderComboBox.Location = new System.Drawing.Point(191, 90);
             this.GenderComboBox.Name = "GenderComboBox";
             this.GenderComboBox.Size = new System.Drawing.Size(560, 37);
             this.GenderComboBox.TabIndex = 6;
@@ -339,6 +341,7 @@
             this.PortraitPictureBox.Location = new System.Drawing.Point(396, 131);
             this.PortraitPictureBox.Name = "PortraitPictureBox";
             this.PortraitPictureBox.Size = new System.Drawing.Size(150, 150);
+            this.PortraitPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PortraitPictureBox.TabIndex = 8;
             this.PortraitPictureBox.TabStop = false;
             this.PortraitPictureBox.Click += new System.EventHandler(this.PortraitPictureBox_Click);
@@ -384,21 +387,21 @@
             this.AbilityTableLayoutPanel.Controls.Add(this.ClassLabel, 2, 0);
             this.AbilityTableLayoutPanel.Controls.Add(this.NameDataLabel, 1, 0);
             this.AbilityTableLayoutPanel.Controls.Add(this.NameLabel, 0, 0);
-            this.AbilityTableLayoutPanel.Controls.Add(this.PopularityDataLabel, 3, 4);
-            this.AbilityTableLayoutPanel.Controls.Add(this.PsycheDataLabel, 3, 3);
-            this.AbilityTableLayoutPanel.Controls.Add(this.EnduranceDataLabel, 1, 4);
-            this.AbilityTableLayoutPanel.Controls.Add(this.IntuitionDataLabel, 3, 2);
+            this.AbilityTableLayoutPanel.Controls.Add(this.ResistanceDataLabel, 3, 4);
+            this.AbilityTableLayoutPanel.Controls.Add(this.DefenseDataLabel, 3, 3);
+            this.AbilityTableLayoutPanel.Controls.Add(this.SkillDataLabel, 1, 4);
+            this.AbilityTableLayoutPanel.Controls.Add(this.LuckDataLabel, 3, 2);
             this.AbilityTableLayoutPanel.Controls.Add(this.HealthLabel, 0, 1);
             this.AbilityTableLayoutPanel.Controls.Add(this.StrengthLabel, 0, 2);
             this.AbilityTableLayoutPanel.Controls.Add(this.ResistanceLabel, 2, 4);
-            this.AbilityTableLayoutPanel.Controls.Add(this.StrengthDataLabel, 1, 3);
+            this.AbilityTableLayoutPanel.Controls.Add(this.MagicDataLabel, 1, 3);
             this.AbilityTableLayoutPanel.Controls.Add(this.DefenseLabel, 2, 3);
             this.AbilityTableLayoutPanel.Controls.Add(this.SkillLabel, 0, 4);
             this.AbilityTableLayoutPanel.Controls.Add(this.SpeedLabel, 2, 1);
-            this.AbilityTableLayoutPanel.Controls.Add(this.AgilityDataLabel, 1, 2);
-            this.AbilityTableLayoutPanel.Controls.Add(this.FightingDataLabel, 1, 1);
+            this.AbilityTableLayoutPanel.Controls.Add(this.StrengthDataLabel, 1, 2);
+            this.AbilityTableLayoutPanel.Controls.Add(this.HealthDataLabel, 1, 1);
             this.AbilityTableLayoutPanel.Controls.Add(this.LuckLabel, 2, 2);
-            this.AbilityTableLayoutPanel.Controls.Add(this.ReasonDataLabel, 3, 1);
+            this.AbilityTableLayoutPanel.Controls.Add(this.SpeedDataLabel, 3, 1);
             this.AbilityTableLayoutPanel.Controls.Add(this.GenerateAbilitiesButton, 2, 6);
             this.AbilityTableLayoutPanel.Controls.Add(this.MagicLabel, 0, 3);
             this.AbilityTableLayoutPanel.Controls.Add(this.GrowthLabel, 0, 5);
@@ -421,7 +424,7 @@
             // 
             this.ClassComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.ClassComboBox.FormattingEnabled = true;
-            this.ClassComboBox.Location = new System.Drawing.Point(492, 12);
+            this.ClassComboBox.Location = new System.Drawing.Point(492, 18);
             this.ClassComboBox.Name = "ClassComboBox";
             this.ClassComboBox.Size = new System.Drawing.Size(259, 37);
             this.ClassComboBox.TabIndex = 11;
@@ -465,57 +468,57 @@
             this.NameLabel.Text = "Name";
             this.NameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // PopularityDataLabel
+            // ResistanceDataLabel
             // 
-            this.PopularityDataLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.ResistanceDataLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.PopularityDataLabel.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.PopularityDataLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PopularityDataLabel.Location = new System.Drawing.Point(492, 244);
-            this.PopularityDataLabel.Name = "PopularityDataLabel";
-            this.PopularityDataLabel.Size = new System.Drawing.Size(259, 61);
-            this.PopularityDataLabel.TabIndex = 1;
-            this.PopularityDataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ResistanceDataLabel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ResistanceDataLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ResistanceDataLabel.Location = new System.Drawing.Point(492, 244);
+            this.ResistanceDataLabel.Name = "ResistanceDataLabel";
+            this.ResistanceDataLabel.Size = new System.Drawing.Size(259, 61);
+            this.ResistanceDataLabel.TabIndex = 1;
+            this.ResistanceDataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // PsycheDataLabel
+            // DefenseDataLabel
             // 
-            this.PsycheDataLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.DefenseDataLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.PsycheDataLabel.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.PsycheDataLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PsycheDataLabel.Location = new System.Drawing.Point(492, 183);
-            this.PsycheDataLabel.Name = "PsycheDataLabel";
-            this.PsycheDataLabel.Size = new System.Drawing.Size(259, 61);
-            this.PsycheDataLabel.TabIndex = 1;
-            this.PsycheDataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.DefenseDataLabel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.DefenseDataLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.DefenseDataLabel.Location = new System.Drawing.Point(492, 183);
+            this.DefenseDataLabel.Name = "DefenseDataLabel";
+            this.DefenseDataLabel.Size = new System.Drawing.Size(259, 61);
+            this.DefenseDataLabel.TabIndex = 1;
+            this.DefenseDataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // EnduranceDataLabel
+            // SkillDataLabel
             // 
-            this.EnduranceDataLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.SkillDataLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.EnduranceDataLabel.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.EnduranceDataLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.EnduranceDataLabel.Location = new System.Drawing.Point(116, 244);
-            this.EnduranceDataLabel.Name = "EnduranceDataLabel";
-            this.EnduranceDataLabel.Size = new System.Drawing.Size(257, 61);
-            this.EnduranceDataLabel.TabIndex = 1;
-            this.EnduranceDataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.SkillDataLabel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.SkillDataLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.SkillDataLabel.Location = new System.Drawing.Point(116, 244);
+            this.SkillDataLabel.Name = "SkillDataLabel";
+            this.SkillDataLabel.Size = new System.Drawing.Size(257, 61);
+            this.SkillDataLabel.TabIndex = 1;
+            this.SkillDataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // IntuitionDataLabel
+            // LuckDataLabel
             // 
-            this.IntuitionDataLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.LuckDataLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.IntuitionDataLabel.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.IntuitionDataLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.IntuitionDataLabel.Location = new System.Drawing.Point(492, 122);
-            this.IntuitionDataLabel.Name = "IntuitionDataLabel";
-            this.IntuitionDataLabel.Size = new System.Drawing.Size(259, 61);
-            this.IntuitionDataLabel.TabIndex = 1;
-            this.IntuitionDataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LuckDataLabel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.LuckDataLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LuckDataLabel.Location = new System.Drawing.Point(492, 122);
+            this.LuckDataLabel.Name = "LuckDataLabel";
+            this.LuckDataLabel.Size = new System.Drawing.Size(259, 61);
+            this.LuckDataLabel.TabIndex = 1;
+            this.LuckDataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // HealthLabel
             // 
@@ -556,18 +559,18 @@
             this.ResistanceLabel.Text = "Resistance";
             this.ResistanceLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // StrengthDataLabel
+            // MagicDataLabel
             // 
-            this.StrengthDataLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.MagicDataLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.StrengthDataLabel.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.StrengthDataLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.StrengthDataLabel.Location = new System.Drawing.Point(116, 183);
-            this.StrengthDataLabel.Name = "StrengthDataLabel";
-            this.StrengthDataLabel.Size = new System.Drawing.Size(257, 61);
-            this.StrengthDataLabel.TabIndex = 1;
-            this.StrengthDataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.MagicDataLabel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.MagicDataLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.MagicDataLabel.Location = new System.Drawing.Point(116, 183);
+            this.MagicDataLabel.Name = "MagicDataLabel";
+            this.MagicDataLabel.Size = new System.Drawing.Size(257, 61);
+            this.MagicDataLabel.TabIndex = 1;
+            this.MagicDataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // DefenseLabel
             // 
@@ -608,31 +611,31 @@
             this.SpeedLabel.Text = "Speed";
             this.SpeedLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // AgilityDataLabel
+            // StrengthDataLabel
             // 
-            this.AgilityDataLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.StrengthDataLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.AgilityDataLabel.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.AgilityDataLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.AgilityDataLabel.Location = new System.Drawing.Point(116, 122);
-            this.AgilityDataLabel.Name = "AgilityDataLabel";
-            this.AgilityDataLabel.Size = new System.Drawing.Size(257, 61);
-            this.AgilityDataLabel.TabIndex = 1;
-            this.AgilityDataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.StrengthDataLabel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.StrengthDataLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.StrengthDataLabel.Location = new System.Drawing.Point(116, 122);
+            this.StrengthDataLabel.Name = "StrengthDataLabel";
+            this.StrengthDataLabel.Size = new System.Drawing.Size(257, 61);
+            this.StrengthDataLabel.TabIndex = 1;
+            this.StrengthDataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // FightingDataLabel
+            // HealthDataLabel
             // 
-            this.FightingDataLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.HealthDataLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.FightingDataLabel.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.FightingDataLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.FightingDataLabel.Location = new System.Drawing.Point(116, 61);
-            this.FightingDataLabel.Name = "FightingDataLabel";
-            this.FightingDataLabel.Size = new System.Drawing.Size(257, 61);
-            this.FightingDataLabel.TabIndex = 1;
-            this.FightingDataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.HealthDataLabel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.HealthDataLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.HealthDataLabel.Location = new System.Drawing.Point(116, 61);
+            this.HealthDataLabel.Name = "HealthDataLabel";
+            this.HealthDataLabel.Size = new System.Drawing.Size(257, 61);
+            this.HealthDataLabel.TabIndex = 1;
+            this.HealthDataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // LuckLabel
             // 
@@ -647,18 +650,18 @@
             this.LuckLabel.Text = "Luck";
             this.LuckLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // ReasonDataLabel
+            // SpeedDataLabel
             // 
-            this.ReasonDataLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.SpeedDataLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.ReasonDataLabel.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ReasonDataLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ReasonDataLabel.Location = new System.Drawing.Point(492, 61);
-            this.ReasonDataLabel.Name = "ReasonDataLabel";
-            this.ReasonDataLabel.Size = new System.Drawing.Size(259, 61);
-            this.ReasonDataLabel.TabIndex = 1;
-            this.ReasonDataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.SpeedDataLabel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.SpeedDataLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.SpeedDataLabel.Location = new System.Drawing.Point(492, 61);
+            this.SpeedDataLabel.Name = "SpeedDataLabel";
+            this.SpeedDataLabel.Size = new System.Drawing.Size(259, 61);
+            this.SpeedDataLabel.TabIndex = 1;
+            this.SpeedDataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // GenerateAbilitiesButton
             // 
@@ -696,7 +699,7 @@
             this.GrowthLabel.Name = "GrowthLabel";
             this.GrowthLabel.Size = new System.Drawing.Size(107, 57);
             this.GrowthLabel.TabIndex = 5;
-            this.GrowthLabel.Text = "Growth";
+            this.GrowthLabel.Text = "Growth Type";
             this.GrowthLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // GrowthRateComboBox
@@ -704,7 +707,7 @@
             this.GrowthRateComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.AbilityTableLayoutPanel.SetColumnSpan(this.GrowthRateComboBox, 3);
             this.GrowthRateComboBox.FormattingEnabled = true;
-            this.GrowthRateComboBox.Location = new System.Drawing.Point(116, 317);
+            this.GrowthRateComboBox.Location = new System.Drawing.Point(116, 323);
             this.GrowthRateComboBox.Name = "GrowthRateComboBox";
             this.GrowthRateComboBox.Size = new System.Drawing.Size(635, 37);
             this.GrowthRateComboBox.TabIndex = 6;
@@ -1191,7 +1194,7 @@
             // 
             this.Item5CB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.Item5CB.FormattingEnabled = true;
-            this.Item5CB.Location = new System.Drawing.Point(114, 125);
+            this.Item5CB.Location = new System.Drawing.Point(114, 131);
             this.Item5CB.Name = "Item5CB";
             this.Item5CB.Size = new System.Drawing.Size(253, 37);
             this.Item5CB.TabIndex = 27;
@@ -1290,7 +1293,7 @@
             // 
             this.Item1CB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.Item1CB.FormattingEnabled = true;
-            this.Item1CB.Location = new System.Drawing.Point(114, 10);
+            this.Item1CB.Location = new System.Drawing.Point(114, 16);
             this.Item1CB.Name = "Item1CB";
             this.Item1CB.Size = new System.Drawing.Size(253, 37);
             this.Item1CB.TabIndex = 22;
@@ -1299,7 +1302,7 @@
             // 
             this.Item3CB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.Item3CB.FormattingEnabled = true;
-            this.Item3CB.Location = new System.Drawing.Point(114, 67);
+            this.Item3CB.Location = new System.Drawing.Point(114, 73);
             this.Item3CB.Name = "Item3CB";
             this.Item3CB.Size = new System.Drawing.Size(253, 37);
             this.Item3CB.TabIndex = 23;
@@ -1308,7 +1311,7 @@
             // 
             this.Item2CB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.Item2CB.FormattingEnabled = true;
-            this.Item2CB.Location = new System.Drawing.Point(484, 10);
+            this.Item2CB.Location = new System.Drawing.Point(484, 16);
             this.Item2CB.Name = "Item2CB";
             this.Item2CB.Size = new System.Drawing.Size(254, 37);
             this.Item2CB.TabIndex = 24;
@@ -1317,7 +1320,7 @@
             // 
             this.Item4CB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.Item4CB.FormattingEnabled = true;
-            this.Item4CB.Location = new System.Drawing.Point(484, 67);
+            this.Item4CB.Location = new System.Drawing.Point(484, 73);
             this.Item4CB.Name = "Item4CB";
             this.Item4CB.Size = new System.Drawing.Size(254, 37);
             this.Item4CB.TabIndex = 26;
@@ -1326,7 +1329,7 @@
             // 
             this.Item6CB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.Item6CB.FormattingEnabled = true;
-            this.Item6CB.Location = new System.Drawing.Point(484, 125);
+            this.Item6CB.Location = new System.Drawing.Point(484, 131);
             this.Item6CB.Name = "Item6CB";
             this.Item6CB.Size = new System.Drawing.Size(254, 37);
             this.Item6CB.TabIndex = 25;
@@ -1373,7 +1376,7 @@
             // 
             this.Loadout6CB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.Loadout6CB.FormattingEnabled = true;
-            this.Loadout6CB.Location = new System.Drawing.Point(484, 124);
+            this.Loadout6CB.Location = new System.Drawing.Point(484, 131);
             this.Loadout6CB.Name = "Loadout6CB";
             this.Loadout6CB.Size = new System.Drawing.Size(254, 37);
             this.Loadout6CB.TabIndex = 24;
@@ -1382,7 +1385,7 @@
             // 
             this.Loadout5CB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.Loadout5CB.FormattingEnabled = true;
-            this.Loadout5CB.Location = new System.Drawing.Point(114, 131);
+            this.Loadout5CB.Location = new System.Drawing.Point(114, 130);
             this.Loadout5CB.Name = "Loadout5CB";
             this.Loadout5CB.Size = new System.Drawing.Size(253, 37);
             this.Loadout5CB.TabIndex = 23;
@@ -1391,7 +1394,7 @@
             // 
             this.Loadout4CB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.Loadout4CB.FormattingEnabled = true;
-            this.Loadout4CB.Location = new System.Drawing.Point(484, 67);
+            this.Loadout4CB.Location = new System.Drawing.Point(484, 73);
             this.Loadout4CB.Name = "Loadout4CB";
             this.Loadout4CB.Size = new System.Drawing.Size(254, 37);
             this.Loadout4CB.TabIndex = 22;
@@ -1400,7 +1403,7 @@
             // 
             this.Loadout3CB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.Loadout3CB.FormattingEnabled = true;
-            this.Loadout3CB.Location = new System.Drawing.Point(114, 67);
+            this.Loadout3CB.Location = new System.Drawing.Point(114, 73);
             this.Loadout3CB.Name = "Loadout3CB";
             this.Loadout3CB.Size = new System.Drawing.Size(253, 37);
             this.Loadout3CB.TabIndex = 21;
@@ -1409,7 +1412,7 @@
             // 
             this.Loadout1CB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.Loadout1CB.FormattingEnabled = true;
-            this.Loadout1CB.Location = new System.Drawing.Point(114, 10);
+            this.Loadout1CB.Location = new System.Drawing.Point(114, 16);
             this.Loadout1CB.Name = "Loadout1CB";
             this.Loadout1CB.Size = new System.Drawing.Size(253, 37);
             this.Loadout1CB.TabIndex = 20;
@@ -1418,7 +1421,7 @@
             // 
             this.Loadout2CB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.Loadout2CB.FormattingEnabled = true;
-            this.Loadout2CB.Location = new System.Drawing.Point(484, 10);
+            this.Loadout2CB.Location = new System.Drawing.Point(484, 16);
             this.Loadout2CB.Name = "Loadout2CB";
             this.Loadout2CB.Size = new System.Drawing.Size(254, 37);
             this.Loadout2CB.TabIndex = 19;
@@ -1709,9 +1712,19 @@
             // 
             this.CharacterSheetOpenFileDialog.FileName = "openFileDialog1";
             // 
+            // SaveProcessButton
+            // 
+            this.SaveProcessButton.Location = new System.Drawing.Point(464, 495);
+            this.SaveProcessButton.Name = "SaveProcessButton";
+            this.SaveProcessButton.Size = new System.Drawing.Size(190, 46);
+            this.SaveProcessButton.TabIndex = 2;
+            this.SaveProcessButton.Text = "Save Process";
+            this.SaveProcessButton.UseVisualStyleBackColor = true;
+            // 
             // HeroGenerator
             // 
             this.ClientSize = new System.Drawing.Size(782, 553);
+            this.Controls.Add(this.SaveProcessButton);
             this.Controls.Add(this.MainTabControl);
             this.Controls.Add(this.BackButton);
             this.Controls.Add(this.NextButton);
@@ -1789,22 +1802,22 @@
         private System.Windows.Forms.Label LastNameLabel;
         private System.Windows.Forms.Label FirstNameLabel;
         private System.Windows.Forms.TableLayoutPanel AbilityTableLayoutPanel;
-        private System.Windows.Forms.Label PopularityDataLabel;
-        private System.Windows.Forms.Label PsycheDataLabel;
-        private System.Windows.Forms.Label EnduranceDataLabel;
-        private System.Windows.Forms.Label IntuitionDataLabel;
+        private System.Windows.Forms.Label ResistanceDataLabel;
+        private System.Windows.Forms.Label DefenseDataLabel;
+        private System.Windows.Forms.Label SkillDataLabel;
+        private System.Windows.Forms.Label LuckDataLabel;
         private System.Windows.Forms.Label HealthLabel;
         private System.Windows.Forms.Label StrengthLabel;
         private System.Windows.Forms.Label ResistanceLabel;
-        private System.Windows.Forms.Label StrengthDataLabel;
+        private System.Windows.Forms.Label MagicDataLabel;
         private System.Windows.Forms.Label DefenseLabel;
         private System.Windows.Forms.Label MagicLabel;
         private System.Windows.Forms.Label SkillLabel;
         private System.Windows.Forms.Label SpeedLabel;
-        private System.Windows.Forms.Label AgilityDataLabel;
-        private System.Windows.Forms.Label FightingDataLabel;
+        private System.Windows.Forms.Label StrengthDataLabel;
+        private System.Windows.Forms.Label HealthDataLabel;
         private System.Windows.Forms.Label LuckLabel;
-        private System.Windows.Forms.Label ReasonDataLabel;
+        private System.Windows.Forms.Label SpeedDataLabel;
         private System.Windows.Forms.Button GenerateAbilitiesButton;
         private System.Windows.Forms.OpenFileDialog CharacterSheetOpenFileDialog;
         private System.Windows.Forms.SaveFileDialog CharacterSheetSaveFileDialog;
@@ -1888,5 +1901,7 @@
         private System.Windows.Forms.ComboBox Loadout2CB;
         private System.Windows.Forms.Button XMLConvButton;
         private System.Windows.Forms.Button JSONConvButton;
+        private System.Windows.Forms.OpenFileDialog CharacterPortraitOFD;
+        private System.Windows.Forms.Button SaveProcessButton;
     }
 }

@@ -64,6 +64,7 @@
     <Compile Include="Objects\FormNames.cs" />
     <Compile Include="Objects\GrowthRate.cs" />
     <Compile Include="Objects\Hero.cs" />
+    <Compile Include="Objects\Mastery.cs" />
     <Compile Include="Objects\Power.cs" />
     <Compile Include="Objects\UnitClass.cs" />
     <Compile Include="Program.cs" />

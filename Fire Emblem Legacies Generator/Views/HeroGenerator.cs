@@ -185,26 +185,15 @@ namespace FELegaciesGeneratorTool.Views
         private void RNGenerator()
         {
             Random stats = new Random();
-            FightingDataLabel.Text = stats.Next(10, 50).ToString();
-            StrengthDataLabel.Text = stats.Next(10,50).ToString();
-            AgilityDataLabel.Text = stats.Next(10, 50).ToString();
-            EnduranceDataLabel.Text = stats.Next(10, 50).ToString();
+            HealthDataLabel.Text = stats.Next(10, 60).ToString();
+            MagicDataLabel.Text = stats.Next(0,20).ToString();
+            StrengthDataLabel.Text = stats.Next(0, 20).ToString();
+            SkillDataLabel.Text = stats.Next(0, 20).ToString();
 
-            ReasonDataLabel.Text = stats.Next(10, 50).ToString();
-            IntuitionDataLabel.Text = stats.Next(10, 50).ToString();
-            PsycheDataLabel.Text = stats.Next(10, 50).ToString();
-            PopularityDataLabel.Text = stats.Next(10, 50).ToString();
-
-            ////Physical Ability
-            //Program.hero.Fighting = FightingDataLabel.Text;
-            //Program.hero.Agility = AgilityDataLabel.Text;
-            //Program.hero.Strength = StrengthDataLabel.Text;
-            //Program.hero.Endurance = EnduranceDataLabel.Text;
-            ////Mental Abillity
-            //Program.hero.Reason = ReasonDataLabel.Text;
-            //Program.hero.Intuition =IntuitionDataLabel.Text;
-            //Program.hero.Psyche = PsycheDataLabel.Text;
-            //Program.hero.Popularity = PopularityDataLabel.Text;
+            SpeedDataLabel.Text = stats.Next(0, 20).ToString();
+            LuckDataLabel.Text = stats.Next(0, 20).ToString();
+            DefenseDataLabel.Text = stats.Next(0, 20).ToString();
+            ResistanceDataLabel.Text = stats.Next(0, 20).ToString();
         }
 
         private void GenerateNameButton_Click(object sender, EventArgs e)
@@ -233,16 +222,12 @@ namespace FELegaciesGeneratorTool.Views
 
         private void MainTabControl_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (MainTabControl.SelectedIndex == 3)
-            {
                 LoadHero();
-            }
         }
 
         private void LoadHero()
         {
-            //CSFname.Text = Program.hero.FirstName;
-            //CSLName.Text = Program.hero.LastName;
+            NameDataLabel.Text = Program.hero.FirstName + " " + Program.hero.LastName;
             ////Physical Ability
             //CSFighting.Text = Program.hero.Fighting;
             //CSStrength.Text = Program.hero.Agility;
@@ -273,42 +258,19 @@ namespace FELegaciesGeneratorTool.Views
         private void PortraitPictureBox_Click(object sender, EventArgs e)
         {
             //configure the file dialog
-            CharacterSheetOpenFileDialog.FileName = "";
-            CharacterSheetOpenFileDialog.InitialDirectory = Directory.GetCurrentDirectory();
-            CharacterSheetOpenFileDialog.Filter = "Picture Files (*.jpg)|*.jpg| PNG Files (*.png)|*.png| BMP Files (*.bmp)|*.bmp| All Files{*.*)|*.*";
+            CharacterPortraitOFD.FileName = "";
+            CharacterPortraitOFD.InitialDirectory = Directory.GetCurrentDirectory();
+            CharacterPortraitOFD.Filter = "Picture Files (*.jpg)|*.jpg| PNG Files (*.png)|*.png| BMP Files (*.bmp)|*.bmp| All Files{*.*)|*.*";
 
             //open the file dialog
-            var result = CharacterSheetOpenFileDialog.ShowDialog();
+            var result = CharacterPortraitOFD.ShowDialog();
             if (result != DialogResult.Cancel)
             {
                 try
                 {
-                    PortraitPictureBox.Image = new Bitmap(CharacterSheetOpenFileDialog.FileName);
-                    //Open the stream for reading
-                    using (StreamReader inputStream = new StreamReader(File.Open(CharacterSheetOpenFileDialog.FileName, FileMode.Open)))
-                    {
+                    Bitmap image = new Bitmap(CharacterPortraitOFD.FileName);
 
-                        //Read from file
-                        ////Physical Ability
-                        //Program.hero.Fighting = inputStream.ReadLine();
-                        //Program.hero.Agility = inputStream.ReadLine();
-                        //Program.hero.Strength = inputStream.ReadLine();
-                        //Program.hero.Endurance = inputStream.ReadLine();
-                        ////Mental Abillity
-                        //Program.hero.Reason = inputStream.ReadLine();
-                        //Program.hero.Intuition = inputStream.ReadLine();
-                        //Program.hero.Psyche = inputStream.ReadLine();
-                        //Program.hero.Popularity = inputStream.ReadLine();
-
-                        //Program.hero.Powers.Clear();
-                        //Program.hero.Powers.Add(inputStream.ReadLine());
-                        //Program.hero.Powers.Add(inputStream.ReadLine());
-                        //Program.hero.Powers.Add(inputStream.ReadLine());
-                        //Program.hero.Powers.Add(inputStream.ReadLine());
-                        //Clean up
-                        inputStream.Close();
-                        inputStream.Dispose();
-                    }
+                    PortraitPictureBox.Image = new Bitmap(CharacterPortraitOFD.FileName);
                 }
                 catch (IOException exception)
                 {
@@ -316,6 +278,44 @@ namespace FELegaciesGeneratorTool.Views
                 }
                 LoadHero();
             }
+        }
+
+        private void SaveData()
+        {
+            //Integer Base Stats
+            Program.hero.HP = Convert.ToInt32(HealthDataLabel.Text);
+            Program.hero.MAG = Convert.ToInt32(MagicDataLabel.Text);
+            Program.hero.STR = Convert.ToInt32(StrengthDataLabel.Text);
+            Program.hero.SKL = Convert.ToInt32(SkillDataLabel.Text);
+            Program.hero.SPD = Convert.ToInt32(SpeedDataLabel.Text);
+            Program.hero.DEF = Convert.ToInt32(DefenseDataLabel.Text);
+            Program.hero.RES = Convert.ToInt32(ResistanceDataLabel.Text);
+            Program.hero.LUK = Convert.ToInt32(LuckDataLabel.Text);
+
+            //Portrait
+            Program.hero.Portrait = PortraitPictureBox.Image;
+
+            //Melee Mastery
+            Program.hero.mastery.SwordMastery = Convert.ToInt32(SwordMasteryNumeric.Value);
+            Program.hero.mastery.LanceMastery = Convert.ToInt32(LanceMasteryNumeric.Value);
+            Program.hero.mastery.AxeMastery = Convert.ToInt32(AxeMasteryNumeric.Value);
+            Program.hero.mastery.UnarmedMastery = Convert.ToInt32(UnarmedMasteryNumeric.Value);
+
+            //Ranged Mastery
+            Program.hero.mastery.BowMastery = Convert.ToInt32(BowMasteryNumeric.Value);
+            Program.hero.mastery.DaggerMastery = Convert.ToInt32(DaggerMasteryNumeric.Value);
+            Program.hero.mastery.ShurikenMastery = Convert.ToInt32(ShurikenMasteryNumeric.Value);
+            Program.hero.mastery.CrossbowMastery = Convert.ToInt32(CrossbowMasteryNumeric.Value);
+
+            //Magic Mastery
+            Program.hero.mastery.LightMastery = Convert.ToInt32(LightMasteryNumeric.Value);
+            Program.hero.mastery.AnimaMastery = Convert.ToInt32(AnimaMasteryNumeric.Value);
+            Program.hero.mastery.DarkMastery = Convert.ToInt32(DarkMasteryNumeric.Value);
+            Program.hero.mastery.StaveMastery = Convert.ToInt32(StaveMasteryNumeric.Value);
+
+            //Class Growth Package
+            //Base Growth Package
+
         }
     }
 }
