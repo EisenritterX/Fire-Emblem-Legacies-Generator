@@ -296,22 +296,22 @@ namespace FELegaciesGeneratorTool.Views
             Program.hero.Portrait = PortraitPictureBox.Image;
 
             //Melee Mastery
-            Program.hero.mastery.SwordMastery = Convert.ToInt32(SwordMasteryNumeric.Value);
-            Program.hero.mastery.LanceMastery = Convert.ToInt32(LanceMasteryNumeric.Value);
-            Program.hero.mastery.AxeMastery = Convert.ToInt32(AxeMasteryNumeric.Value);
-            Program.hero.mastery.UnarmedMastery = Convert.ToInt32(UnarmedMasteryNumeric.Value);
+            Program.hero.Mastery.SwordMastery = Convert.ToInt32(SwordMasteryNumeric.Value);
+            Program.hero.Mastery.LanceMastery = Convert.ToInt32(LanceMasteryNumeric.Value);
+            Program.hero.Mastery.AxeMastery = Convert.ToInt32(AxeMasteryNumeric.Value);
+            Program.hero.Mastery.UnarmedMastery = Convert.ToInt32(UnarmedMasteryNumeric.Value);
 
             //Ranged Mastery
-            Program.hero.mastery.BowMastery = Convert.ToInt32(BowMasteryNumeric.Value);
-            Program.hero.mastery.DaggerMastery = Convert.ToInt32(DaggerMasteryNumeric.Value);
-            Program.hero.mastery.ShurikenMastery = Convert.ToInt32(ShurikenMasteryNumeric.Value);
-            Program.hero.mastery.CrossbowMastery = Convert.ToInt32(CrossbowMasteryNumeric.Value);
+            Program.hero.Mastery.BowMastery = Convert.ToInt32(BowMasteryNumeric.Value);
+            Program.hero.Mastery.DaggerMastery = Convert.ToInt32(DaggerMasteryNumeric.Value);
+            Program.hero.Mastery.ShurikenMastery = Convert.ToInt32(ShurikenMasteryNumeric.Value);
+            Program.hero.Mastery.CrossbowMastery = Convert.ToInt32(CrossbowMasteryNumeric.Value);
 
             //Magic Mastery
-            Program.hero.mastery.LightMastery = Convert.ToInt32(LightMasteryNumeric.Value);
-            Program.hero.mastery.AnimaMastery = Convert.ToInt32(AnimaMasteryNumeric.Value);
-            Program.hero.mastery.DarkMastery = Convert.ToInt32(DarkMasteryNumeric.Value);
-            Program.hero.mastery.StaveMastery = Convert.ToInt32(StaveMasteryNumeric.Value);
+            Program.hero.Mastery.LightMastery = Convert.ToInt32(LightMasteryNumeric.Value);
+            Program.hero.Mastery.AnimaMastery = Convert.ToInt32(AnimaMasteryNumeric.Value);
+            Program.hero.Mastery.DarkMastery = Convert.ToInt32(DarkMasteryNumeric.Value);
+            Program.hero.Mastery.StaveMastery = Convert.ToInt32(StaveMasteryNumeric.Value);
 
             //Class Growth Package
             //Base Growth Package

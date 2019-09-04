@@ -40,7 +40,6 @@
             this.FirstNameLabel = new System.Windows.Forms.Label();
             this.FirstNameTextBox = new System.Windows.Forms.TextBox();
             this.GenderComboBox = new System.Windows.Forms.ComboBox();
-            this.PortraitPictureBox = new System.Windows.Forms.PictureBox();
             this.GenerateNameButton = new System.Windows.Forms.Button();
             this.DescriptionRTF = new System.Windows.Forms.RichTextBox();
             this.AbilitiesPage = new System.Windows.Forms.TabPage();
@@ -136,15 +135,10 @@
             this.SummaryRTF = new System.Windows.Forms.RichTextBox();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.HeroToolStrip = new System.Windows.Forms.ToolStrip();
-            this.openToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.saveToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.helpToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.HeroMenuStrip = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
-            this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -155,10 +149,15 @@
             this.CharacterSheetSaveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.CharacterPortraitOFD = new System.Windows.Forms.OpenFileDialog();
             this.SaveProcessButton = new System.Windows.Forms.Button();
+            this.PortraitPictureBox = new System.Windows.Forms.PictureBox();
+            this.openToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.saveToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.helpToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MainTabControl.SuspendLayout();
             this.IdentityPage.SuspendLayout();
             this.UnitTableLayoutPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PortraitPictureBox)).BeginInit();
             this.AbilitiesPage.SuspendLayout();
             this.AbilityTableLayoutPanel.SuspendLayout();
             this.MasteryPage.SuspendLayout();
@@ -190,6 +189,7 @@
             this.SummaryPage.SuspendLayout();
             this.HeroToolStrip.SuspendLayout();
             this.HeroMenuStrip.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PortraitPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // MainTabControl
@@ -231,7 +231,6 @@
             this.UnitTableLayoutPanel.Controls.Add(this.FirstNameTextBox, 1, 0);
             this.UnitTableLayoutPanel.Controls.Add(this.GenderComboBox, 1, 2);
             this.UnitTableLayoutPanel.Controls.Add(this.PortraitPictureBox, 1, 3);
-            this.UnitTableLayoutPanel.Controls.Add(this.GenerateNameButton, 1, 5);
             this.UnitTableLayoutPanel.Controls.Add(this.DescriptionRTF, 1, 4);
             this.UnitTableLayoutPanel.Location = new System.Drawing.Point(12, 15);
             this.UnitTableLayoutPanel.Name = "UnitTableLayoutPanel";
@@ -328,30 +327,17 @@
             this.GenderComboBox.Items.AddRange(new object[] {
             "MALE",
             "FEMALE"});
-            this.GenderComboBox.Location = new System.Drawing.Point(191, 90);
+            this.GenderComboBox.Location = new System.Drawing.Point(191, 85);
             this.GenderComboBox.Name = "GenderComboBox";
             this.GenderComboBox.Size = new System.Drawing.Size(560, 37);
             this.GenderComboBox.TabIndex = 6;
             // 
-            // PortraitPictureBox
-            // 
-            this.PortraitPictureBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.PortraitPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.PortraitPictureBox.Image = global::FELegaciesGeneratorTool.Properties.Resources.Shield_of_Seals;
-            this.PortraitPictureBox.Location = new System.Drawing.Point(396, 131);
-            this.PortraitPictureBox.Name = "PortraitPictureBox";
-            this.PortraitPictureBox.Size = new System.Drawing.Size(150, 150);
-            this.PortraitPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PortraitPictureBox.TabIndex = 8;
-            this.PortraitPictureBox.TabStop = false;
-            this.PortraitPictureBox.Click += new System.EventHandler(this.PortraitPictureBox_Click);
-            // 
             // GenerateNameButton
             // 
             this.GenerateNameButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.GenerateNameButton.Location = new System.Drawing.Point(191, 375);
+            this.GenerateNameButton.Location = new System.Drawing.Point(132, 495);
             this.GenerateNameButton.Name = "GenerateNameButton";
-            this.GenerateNameButton.Size = new System.Drawing.Size(560, 38);
+            this.GenerateNameButton.Size = new System.Drawing.Size(326, 46);
             this.GenerateNameButton.TabIndex = 2;
             this.GenerateNameButton.Text = "Generate Character";
             this.GenerateNameButton.UseVisualStyleBackColor = true;
@@ -424,7 +410,7 @@
             // 
             this.ClassComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.ClassComboBox.FormattingEnabled = true;
-            this.ClassComboBox.Location = new System.Drawing.Point(492, 18);
+            this.ClassComboBox.Location = new System.Drawing.Point(492, 12);
             this.ClassComboBox.Name = "ClassComboBox";
             this.ClassComboBox.Size = new System.Drawing.Size(259, 37);
             this.ClassComboBox.TabIndex = 11;
@@ -707,7 +693,7 @@
             this.GrowthRateComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.AbilityTableLayoutPanel.SetColumnSpan(this.GrowthRateComboBox, 3);
             this.GrowthRateComboBox.FormattingEnabled = true;
-            this.GrowthRateComboBox.Location = new System.Drawing.Point(116, 323);
+            this.GrowthRateComboBox.Location = new System.Drawing.Point(116, 317);
             this.GrowthRateComboBox.Name = "GrowthRateComboBox";
             this.GrowthRateComboBox.Size = new System.Drawing.Size(635, 37);
             this.GrowthRateComboBox.TabIndex = 6;
@@ -1129,10 +1115,10 @@
             // ItemsTabPage
             // 
             this.ItemsTabPage.Controls.Add(this.EquipmentITemsTLP);
-            this.ItemsTabPage.Location = new System.Drawing.Point(4, 38);
+            this.ItemsTabPage.Location = new System.Drawing.Point(4, 25);
             this.ItemsTabPage.Name = "ItemsTabPage";
             this.ItemsTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.ItemsTabPage.Size = new System.Drawing.Size(774, 447);
+            this.ItemsTabPage.Size = new System.Drawing.Size(774, 460);
             this.ItemsTabPage.TabIndex = 4;
             this.ItemsTabPage.Text = "Equipment & Items";
             this.ItemsTabPage.UseVisualStyleBackColor = true;
@@ -1194,7 +1180,7 @@
             // 
             this.Item5CB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.Item5CB.FormattingEnabled = true;
-            this.Item5CB.Location = new System.Drawing.Point(114, 131);
+            this.Item5CB.Location = new System.Drawing.Point(114, 125);
             this.Item5CB.Name = "Item5CB";
             this.Item5CB.Size = new System.Drawing.Size(253, 37);
             this.Item5CB.TabIndex = 27;
@@ -1293,7 +1279,7 @@
             // 
             this.Item1CB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.Item1CB.FormattingEnabled = true;
-            this.Item1CB.Location = new System.Drawing.Point(114, 16);
+            this.Item1CB.Location = new System.Drawing.Point(114, 10);
             this.Item1CB.Name = "Item1CB";
             this.Item1CB.Size = new System.Drawing.Size(253, 37);
             this.Item1CB.TabIndex = 22;
@@ -1302,7 +1288,7 @@
             // 
             this.Item3CB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.Item3CB.FormattingEnabled = true;
-            this.Item3CB.Location = new System.Drawing.Point(114, 73);
+            this.Item3CB.Location = new System.Drawing.Point(114, 67);
             this.Item3CB.Name = "Item3CB";
             this.Item3CB.Size = new System.Drawing.Size(253, 37);
             this.Item3CB.TabIndex = 23;
@@ -1311,7 +1297,7 @@
             // 
             this.Item2CB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.Item2CB.FormattingEnabled = true;
-            this.Item2CB.Location = new System.Drawing.Point(484, 16);
+            this.Item2CB.Location = new System.Drawing.Point(484, 10);
             this.Item2CB.Name = "Item2CB";
             this.Item2CB.Size = new System.Drawing.Size(254, 37);
             this.Item2CB.TabIndex = 24;
@@ -1320,7 +1306,7 @@
             // 
             this.Item4CB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.Item4CB.FormattingEnabled = true;
-            this.Item4CB.Location = new System.Drawing.Point(484, 73);
+            this.Item4CB.Location = new System.Drawing.Point(484, 67);
             this.Item4CB.Name = "Item4CB";
             this.Item4CB.Size = new System.Drawing.Size(254, 37);
             this.Item4CB.TabIndex = 26;
@@ -1329,7 +1315,7 @@
             // 
             this.Item6CB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.Item6CB.FormattingEnabled = true;
-            this.Item6CB.Location = new System.Drawing.Point(484, 131);
+            this.Item6CB.Location = new System.Drawing.Point(484, 125);
             this.Item6CB.Name = "Item6CB";
             this.Item6CB.Size = new System.Drawing.Size(254, 37);
             this.Item6CB.TabIndex = 25;
@@ -1376,7 +1362,7 @@
             // 
             this.Loadout6CB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.Loadout6CB.FormattingEnabled = true;
-            this.Loadout6CB.Location = new System.Drawing.Point(484, 131);
+            this.Loadout6CB.Location = new System.Drawing.Point(484, 124);
             this.Loadout6CB.Name = "Loadout6CB";
             this.Loadout6CB.Size = new System.Drawing.Size(254, 37);
             this.Loadout6CB.TabIndex = 24;
@@ -1385,7 +1371,7 @@
             // 
             this.Loadout5CB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.Loadout5CB.FormattingEnabled = true;
-            this.Loadout5CB.Location = new System.Drawing.Point(114, 130);
+            this.Loadout5CB.Location = new System.Drawing.Point(114, 124);
             this.Loadout5CB.Name = "Loadout5CB";
             this.Loadout5CB.Size = new System.Drawing.Size(253, 37);
             this.Loadout5CB.TabIndex = 23;
@@ -1394,7 +1380,7 @@
             // 
             this.Loadout4CB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.Loadout4CB.FormattingEnabled = true;
-            this.Loadout4CB.Location = new System.Drawing.Point(484, 73);
+            this.Loadout4CB.Location = new System.Drawing.Point(484, 67);
             this.Loadout4CB.Name = "Loadout4CB";
             this.Loadout4CB.Size = new System.Drawing.Size(254, 37);
             this.Loadout4CB.TabIndex = 22;
@@ -1403,7 +1389,7 @@
             // 
             this.Loadout3CB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.Loadout3CB.FormattingEnabled = true;
-            this.Loadout3CB.Location = new System.Drawing.Point(114, 73);
+            this.Loadout3CB.Location = new System.Drawing.Point(114, 67);
             this.Loadout3CB.Name = "Loadout3CB";
             this.Loadout3CB.Size = new System.Drawing.Size(253, 37);
             this.Loadout3CB.TabIndex = 21;
@@ -1412,7 +1398,7 @@
             // 
             this.Loadout1CB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.Loadout1CB.FormattingEnabled = true;
-            this.Loadout1CB.Location = new System.Drawing.Point(114, 16);
+            this.Loadout1CB.Location = new System.Drawing.Point(114, 10);
             this.Loadout1CB.Name = "Loadout1CB";
             this.Loadout1CB.Size = new System.Drawing.Size(253, 37);
             this.Loadout1CB.TabIndex = 20;
@@ -1421,7 +1407,7 @@
             // 
             this.Loadout2CB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.Loadout2CB.FormattingEnabled = true;
-            this.Loadout2CB.Location = new System.Drawing.Point(484, 16);
+            this.Loadout2CB.Location = new System.Drawing.Point(484, 10);
             this.Loadout2CB.Name = "Loadout2CB";
             this.Loadout2CB.Size = new System.Drawing.Size(254, 37);
             this.Loadout2CB.TabIndex = 19;
@@ -1525,9 +1511,9 @@
             this.SummaryPage.Controls.Add(this.richTextBox1);
             this.SummaryPage.Controls.Add(this.HeroToolStrip);
             this.SummaryPage.Controls.Add(this.HeroMenuStrip);
-            this.SummaryPage.Location = new System.Drawing.Point(4, 38);
+            this.SummaryPage.Location = new System.Drawing.Point(4, 25);
             this.SummaryPage.Name = "SummaryPage";
-            this.SummaryPage.Size = new System.Drawing.Size(774, 447);
+            this.SummaryPage.Size = new System.Drawing.Size(774, 460);
             this.SummaryPage.TabIndex = 3;
             this.SummaryPage.Text = "Summary";
             this.SummaryPage.UseVisualStyleBackColor = true;
@@ -1580,39 +1566,10 @@
             this.HeroToolStrip.TabIndex = 1;
             this.HeroToolStrip.Text = "toolStrip1";
             // 
-            // openToolStripButton
-            // 
-            this.openToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.openToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("openToolStripButton.Image")));
-            this.openToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.openToolStripButton.Name = "openToolStripButton";
-            this.openToolStripButton.Size = new System.Drawing.Size(29, 24);
-            this.openToolStripButton.Text = "&Open";
-            this.openToolStripButton.Click += new System.EventHandler(this.OpenToolStripButton_Click);
-            // 
-            // saveToolStripButton
-            // 
-            this.saveToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.saveToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("saveToolStripButton.Image")));
-            this.saveToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.saveToolStripButton.Name = "saveToolStripButton";
-            this.saveToolStripButton.Size = new System.Drawing.Size(29, 24);
-            this.saveToolStripButton.Text = "&Save";
-            this.saveToolStripButton.Click += new System.EventHandler(this.SaveToolStripButton_Click);
-            // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
             this.toolStripSeparator3.Size = new System.Drawing.Size(6, 27);
-            // 
-            // helpToolStripButton
-            // 
-            this.helpToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.helpToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("helpToolStripButton.Image")));
-            this.helpToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.helpToolStripButton.Name = "helpToolStripButton";
-            this.helpToolStripButton.Size = new System.Drawing.Size(29, 24);
-            this.helpToolStripButton.Text = "He&lp";
             // 
             // HeroMenuStrip
             // 
@@ -1638,29 +1595,10 @@
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
             this.fileToolStripMenuItem.Text = "&File";
             // 
-            // openToolStripMenuItem
-            // 
-            this.openToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("openToolStripMenuItem.Image")));
-            this.openToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
-            this.openToolStripMenuItem.Text = "&Open";
-            this.openToolStripMenuItem.Click += new System.EventHandler(this.OpenToolStripButton_Click);
-            // 
             // toolStripSeparator
             // 
             this.toolStripSeparator.Name = "toolStripSeparator";
             this.toolStripSeparator.Size = new System.Drawing.Size(178, 6);
-            // 
-            // saveToolStripMenuItem
-            // 
-            this.saveToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("saveToolStripMenuItem.Image")));
-            this.saveToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
-            this.saveToolStripMenuItem.Text = "&Save";
             // 
             // toolStripSeparator1
             // 
@@ -1721,6 +1659,67 @@
             this.SaveProcessButton.Text = "Save Process";
             this.SaveProcessButton.UseVisualStyleBackColor = true;
             // 
+            // PortraitPictureBox
+            // 
+            this.PortraitPictureBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PortraitPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.PortraitPictureBox.Image = global::FELegaciesGeneratorTool.Properties.Resources.Shield_of_Seals;
+            this.PortraitPictureBox.Location = new System.Drawing.Point(396, 131);
+            this.PortraitPictureBox.Name = "PortraitPictureBox";
+            this.PortraitPictureBox.Size = new System.Drawing.Size(150, 150);
+            this.PortraitPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PortraitPictureBox.TabIndex = 8;
+            this.PortraitPictureBox.TabStop = false;
+            this.PortraitPictureBox.Click += new System.EventHandler(this.PortraitPictureBox_Click);
+            // 
+            // openToolStripButton
+            // 
+            this.openToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.openToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("openToolStripButton.Image")));
+            this.openToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.openToolStripButton.Name = "openToolStripButton";
+            this.openToolStripButton.Size = new System.Drawing.Size(29, 24);
+            this.openToolStripButton.Text = "&Open";
+            this.openToolStripButton.Click += new System.EventHandler(this.OpenToolStripButton_Click);
+            // 
+            // saveToolStripButton
+            // 
+            this.saveToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.saveToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("saveToolStripButton.Image")));
+            this.saveToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.saveToolStripButton.Name = "saveToolStripButton";
+            this.saveToolStripButton.Size = new System.Drawing.Size(29, 24);
+            this.saveToolStripButton.Text = "&Save";
+            this.saveToolStripButton.Click += new System.EventHandler(this.SaveToolStripButton_Click);
+            // 
+            // helpToolStripButton
+            // 
+            this.helpToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.helpToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("helpToolStripButton.Image")));
+            this.helpToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.helpToolStripButton.Name = "helpToolStripButton";
+            this.helpToolStripButton.Size = new System.Drawing.Size(29, 24);
+            this.helpToolStripButton.Text = "He&lp";
+            // 
+            // openToolStripMenuItem
+            // 
+            this.openToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("openToolStripMenuItem.Image")));
+            this.openToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.openToolStripMenuItem.Name = "openToolStripMenuItem";
+            this.openToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.openToolStripMenuItem.Text = "&Open";
+            this.openToolStripMenuItem.Click += new System.EventHandler(this.OpenToolStripButton_Click);
+            // 
+            // saveToolStripMenuItem
+            // 
+            this.saveToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("saveToolStripMenuItem.Image")));
+            this.saveToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
+            this.saveToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.saveToolStripMenuItem.Text = "&Save";
+            // 
             // HeroGenerator
             // 
             this.ClientSize = new System.Drawing.Size(782, 553);
@@ -1728,6 +1727,7 @@
             this.Controls.Add(this.MainTabControl);
             this.Controls.Add(this.BackButton);
             this.Controls.Add(this.NextButton);
+            this.Controls.Add(this.GenerateNameButton);
             this.MainMenuStrip = this.HeroMenuStrip;
             this.Name = "HeroGenerator";
             this.Text = "Hero Generator";
@@ -1736,7 +1736,6 @@
             this.IdentityPage.ResumeLayout(false);
             this.UnitTableLayoutPanel.ResumeLayout(false);
             this.UnitTableLayoutPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PortraitPictureBox)).EndInit();
             this.AbilitiesPage.ResumeLayout(false);
             this.AbilityTableLayoutPanel.ResumeLayout(false);
             this.MasteryPage.ResumeLayout(false);
@@ -1771,6 +1770,7 @@
             this.HeroToolStrip.PerformLayout();
             this.HeroMenuStrip.ResumeLayout(false);
             this.HeroMenuStrip.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PortraitPictureBox)).EndInit();
             this.ResumeLayout(false);
 
         }

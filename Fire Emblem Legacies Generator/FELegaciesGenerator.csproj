@@ -61,14 +61,33 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Objects\Class.cs" />
     <Compile Include="Objects\FormNames.cs" />
     <Compile Include="Objects\GrowthRate.cs" />
     <Compile Include="Objects\Hero.cs" />
+    <Compile Include="Objects\ItemEquipment.cs" />
     <Compile Include="Objects\Mastery.cs" />
     <Compile Include="Objects\Power.cs" />
-    <Compile Include="Objects\UnitClass.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\ClassGenerator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ClassGenerator.Designer.cs">
+      <DependentUpon>ClassGenerator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\GrowthTypeGenerator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\GrowthTypeGenerator.Designer.cs">
+      <DependentUpon>GrowthTypeGenerator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ItemEquipmentGenerator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ItemEquipmentGenerator.Designer.cs">
+      <DependentUpon>ItemEquipmentGenerator.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\StartForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +122,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Views\ClassGenerator.resx">
+      <DependentUpon>ClassGenerator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\GrowthTypeGenerator.resx">
+      <DependentUpon>GrowthTypeGenerator.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\HeroGenerator.resx">
       <DependentUpon>HeroGenerator.cs</DependentUpon>
     </EmbeddedResource>

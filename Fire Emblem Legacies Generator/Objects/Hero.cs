@@ -130,11 +130,11 @@ namespace FELegaciesGeneratorTool.Objects
         }
 
         //Unit Class
-        public UnitClass Class { get; set; }
+        public Class Class { get; set; }
         //Power List
         public Power Powers;
         //Mastery
-        public Mastery mastery;
+        public Mastery Mastery;
 
         //Constructor
         public Hero()
