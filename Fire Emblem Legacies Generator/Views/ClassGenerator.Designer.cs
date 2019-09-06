@@ -138,6 +138,7 @@
             this.NextButton = new System.Windows.Forms.Button();
             this.SaveButton = new System.Windows.Forms.Button();
             this.ReturnButton = new System.Windows.Forms.Button();
+            this.ClassSFD = new System.Windows.Forms.SaveFileDialog();
             this.toolStrip1.SuspendLayout();
             this.BaseMasteryPage.SuspendLayout();
             this.MasteryOuterTableLayoutPanel.SuspendLayout();
@@ -1814,5 +1815,6 @@
         private System.Windows.Forms.Label LvlCapLabel;
         private System.Windows.Forms.NumericUpDown BSLVLCapNum;
         private System.Windows.Forms.TextBox ClassNameTB;
+        private System.Windows.Forms.SaveFileDialog ClassSFD;
     }
 }

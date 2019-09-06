@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using System.IO;
 using Newtonsoft.Json;
 using FELegaciesGeneratorTool.Objects;
 
@@ -37,6 +38,8 @@ namespace FELegaciesGeneratorTool.Views
             {
                 Program.JobClasses.Add(JobClass);
             }
+            string classesJsonData = JsonConvert.SerializeObject(Program.JobClasses);
+            SaveObjectToJson(Program.JobClasses);
         }
 
         private void GetDataFromForm()
@@ -81,6 +84,35 @@ namespace FELegaciesGeneratorTool.Views
             JobClass.GrowthRate.LUK = (int)LCKGrowthNumeric.Value;
             JobClass.GrowthRate.DEF = (int)DEFGrowthNumeric.Value;
             JobClass.GrowthRate.RES = (int)RESGrowthNumeric.Value;
+        }
+
+        private void SaveObjectToJson(object f)
+        {
+            //configure the file dialog
+            ClassSFD.FileName = "ClassData.txt";
+            ClassSFD.InitialDirectory = Directory.GetCurrentDirectory();
+            ClassSFD.Filter = "Text Files (*.txt)|*.txt| All Files{*.*)|*.*";
+
+            JsonSerializer serializer = new JsonSerializer();
+            //open the file dialog
+            var result = ClassSFD.ShowDialog();
+            if (result != DialogResult.Cancel)
+            {
+                //open the stream for writing
+                using (StreamWriter outputStream = new StreamWriter(File.Open(ClassSFD.FileName, FileMode.Create)))
+                {
+                    using (JsonWriter jw = new JsonTextWriter(outputStream))
+                    {
+                       serializer.Serialize(jw, f);
+                    }
+                   
+                    outputStream.Close();
+                    outputStream.Dispose();
+
+                    //Give feedback to the user that the file has been saved
+                    MessageBox.Show("File Saved...", "Saving File...", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
         }
 
         private void AddClassButton_Click(object sender, EventArgs e)
