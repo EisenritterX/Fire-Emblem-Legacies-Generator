@@ -26,5 +26,11 @@ namespace FELegaciesGeneratorTool.Views
             this.Hide();
             Program.Forms[FormNames.HEROGEN_FORM].Show();
         }
+
+        private void CreateClassButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Program.Forms[FormNames.CLASSGEN_FORM].Show();
+        }
     }
 }

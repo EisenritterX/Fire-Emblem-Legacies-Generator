@@ -13,6 +13,7 @@ namespace FELegaciesGeneratorTool
         public static Dictionary<FormNames, Form> Forms;
         // This is temporary
         public static Hero hero;
+        public static List<Class> JobClasses;
 
         /// <summary>
         /// The main entry point for the application.
@@ -30,10 +31,12 @@ namespace FELegaciesGeneratorTool
             Forms.Add(FormNames.SPLASH_SCREEN, new SplashScreen());
             Forms.Add(FormNames.START_FORM, new StartForm());
             Forms.Add(FormNames.HEROGEN_FORM, new HeroGenerator());
+            Forms.Add(FormNames.CLASSGEN_FORM, new ClassGenerator());
             
 
             //Creates a new Hero
             hero = new Hero();
+            JobClasses = new List<Class>();
 
             Application.Run(Forms[FormNames.SPLASH_SCREEN]);
         }

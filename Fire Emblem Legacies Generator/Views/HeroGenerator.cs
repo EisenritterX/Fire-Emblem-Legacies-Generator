@@ -12,6 +12,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.IO;
 using System.Linq;
+using FELegaciesGeneratorTool.Objects;
 
 namespace FELegaciesGeneratorTool.Views
 {
@@ -252,7 +253,9 @@ namespace FELegaciesGeneratorTool.Views
 
         private void HeroGenerator_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Application.Exit();
+            this.Hide();
+            Program.Forms[FormNames.START_FORM].Show();
+
         }
 
         private void PortraitPictureBox_Click(object sender, EventArgs e)
@@ -316,6 +319,12 @@ namespace FELegaciesGeneratorTool.Views
             //Class Growth Package
             //Base Growth Package
 
+        }
+
+        private void ReturnButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Program.Forms[FormNames.START_FORM].Show();
         }
     }
 }

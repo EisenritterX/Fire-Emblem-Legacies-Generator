@@ -93,6 +93,7 @@
             this.CreateClassButton.TabIndex = 1;
             this.CreateClassButton.Text = "Create Class";
             this.CreateClassButton.UseVisualStyleBackColor = false;
+            this.CreateClassButton.Click += new System.EventHandler(this.CreateClassButton_Click);
             // 
             // CreateEquipmentButton
             // 
